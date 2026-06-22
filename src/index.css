@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+:root {
+  --bg-color: #ffffff;
+  --surface-bg: #fdfdfd;
+  --surface-hover: #f1f1f1;
+  --surface-gradient: radial-gradient(circle at 50% 50%, #fefefe, #f0f0f0);
+  --border-color: #e5e5e5;
+  
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-tertiary: #888888;
+  
+  --primary-color: #e0e0e0; 
+  
+  --color-good: #34c759;
+  --color-good-glow: rgba(52, 199, 89, 0.2);
+  
+  --color-warn: #ff9500;
+  --color-warn-glow: rgba(255, 149, 0, 0.2);
+  
+  --color-bad: #ff3b30;
+  --color-bad-glow: rgba(255, 59, 48, 0.2);
+}
+
+body {
+  margin: 0;
+  font-family: 'Nanum Pen Script', cursive;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  overflow: hidden; 
+  font-size: 1.4rem; /* 손글씨 폰트 가독성을 위해 크기 상향 */
+}
+
+/* 모든 요소에 폰트 강제 적용 */
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  font-family: 'Nanum Pen Script', cursive !important;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  height: 100svh;
+}

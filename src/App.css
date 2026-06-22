@@ -1,0 +1,99 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+}
+
+/* --- Header Styles --- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  z-index: 10;
+}
+
+.icon-button {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  border-radius: 8px;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: none;
+}
+
+.icon-button:active {
+  transform: scale(0.95);
+  background: var(--surface-hover);
+}
+
+.icon-button.active {
+  color: var(--color-good);
+  border-color: var(--color-good);
+}
+
+.button-text {
+  font-weight: 400;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+/* --- Gong Area --- */
+.gong-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 90px;
+}
+
+.quote-overlay {
+  position: absolute;
+  bottom: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 90%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  padding: 10px;
+  z-index: 20;
+}
+
+.quote-overlay.visible {
+  opacity: 1;
+}
+
+.quote-text {
+  margin: 0;
+  font-size: 1.8rem;
+  line-height: 1.3;
+  color: var(--text-primary);
+  font-weight: 400;
+}
+
+/* --- Timers Area --- */
+.timers-container {
+  padding-bottom: 30px;
+  z-index: 10;
+}
+
+.timer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 20px 10px;
+}

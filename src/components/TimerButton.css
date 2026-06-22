@@ -1,0 +1,87 @@
+.timer-item {
+  display: flex;
+  flex-direction: row; /* Align icon and text horizontally */
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.timer-icon-btn {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background-color: var(--surface-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  padding: 0;
+}
+
+.timer-icon-btn:hover, .timer-icon-btn:active {
+  transform: scale(0.95);
+  background-color: var(--surface-hover);
+}
+
+.pulse-ring {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  animation: none;
+  opacity: 0.6;
+}
+
+/* Status colors */
+.status-good .timer-icon-btn {
+  border-color: var(--color-good);
+  color: var(--color-good);
+}
+
+.status-warn .timer-icon-btn {
+  border-color: var(--color-warn);
+  color: var(--color-warn);
+}
+
+.status-bad .timer-icon-btn {
+  border-color: var(--color-bad);
+  color: var(--color-bad);
+}
+
+.status-bad .pulse-ring {
+  border-color: var(--color-bad);
+  animation: pulseBad 2s infinite;
+}
+
+@keyframes pulseBad {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.3); opacity: 0; }
+}
+
+.timer-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.timer-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-width: 70px; /* stabilize width */
+}
+
+.timer-duration {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: 0.5px;
+}
