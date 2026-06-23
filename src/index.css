@@ -1,46 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap');
 
 :root {
-  --bg-color: #ffffff;
-  --surface-bg: #fdfdfd;
-  --surface-hover: #f1f1f1;
-  --surface-gradient: radial-gradient(circle at 50% 50%, #fefefe, #f0f0f0);
-  --border-color: #e5e5e5;
-  
-  --text-primary: #1a1a1a;
-  --text-secondary: #4a4a4a;
-  --text-tertiary: #888888;
-  
-  --primary-color: #e0e0e0; 
-  
-  --color-good: #34c759;
-  --color-good-glow: rgba(52, 199, 89, 0.2);
-  
-  --color-warn: #ff9500;
-  --color-warn-glow: rgba(255, 149, 0, 0.2);
-  
-  --color-bad: #ff3b30;
-  --color-bad-glow: rgba(255, 59, 48, 0.2);
+  color-scheme: dark;
+  --bg-base: #040913;
+  --bg-deep: #08131f;
+  --text-primary: #f4fbff;
+  --text-bright: #b9fbff;
+  --text-secondary: #97adbb;
+  --text-tertiary: #688091;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
 }
 
 body {
   margin: 0;
-  font-family: 'Nanum Pen Script', cursive;
-  background-color: var(--bg-color);
+  font-family: 'Space Grotesk', sans-serif;
   color: var(--text-primary);
-  overflow: hidden; 
-  font-size: 1.4rem; /* 손글씨 폰트 가독성을 위해 크기 상향 */
+  background:
+    radial-gradient(circle at top, rgba(52, 125, 255, 0.14), transparent 30%),
+    radial-gradient(circle at 80% 20%, rgba(130, 255, 124, 0.08), transparent 22%),
+    linear-gradient(180deg, var(--bg-base), var(--bg-deep));
 }
 
-/* 모든 요소에 폰트 강제 적용 */
-* {
-  box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent;
-  font-family: 'Nanum Pen Script', cursive !important;
+h1,
+h2,
+h3,
+strong,
+.eyebrow,
+.panel-kicker,
+.stat-label,
+.telemetry-label,
+label span {
+  font-family: 'Orbitron', sans-serif;
 }
 
-#root {
-  width: 100vw;
-  height: 100vh;
-  height: 100svh;
+button,
+input,
+select,
+textarea {
+  font: inherit;
 }
